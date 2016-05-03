@@ -7,7 +7,8 @@ const isDev = process.env.NODE_ENV === 'development'
 
 const mb = menubar({
   dir: __dirname,
-  icon: __dirname + '/images/icon.png'
+  icon: __dirname + '/images/icon.png',
+  width: 300
 })
 
 

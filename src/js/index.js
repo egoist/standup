@@ -10,7 +10,8 @@ new Vue({
     return {
       user: JSON.parse(localStorage.getItem('stand:user')) || defaultUserData,
       remainTime: null,
-      paused: false
+      paused: false,
+      typed: false
     }
   },
   ready() {
@@ -18,15 +19,20 @@ new Vue({
     ipc.on('restart timer', this.startTimer.bind(this))
   },
   methods: {
+    handleTyping() {
+      this.typed = true
+    },
     openFullWindow() {
       ipc.send('create popup')
     },
     handleConfirm() {
+      this.typed = false
       const data = JSON.stringify(this.user)
       localStorage.setItem('stand:user', data)
       this.startTimer()
     },
     handleReset() {
+      this.typed = true
       this.user = {
         workTime: 40,
         restTime: 10
@@ -58,7 +64,7 @@ new Vue({
     formatTimer(val) {
       val = val / 1000
       if (val > 60) {
-        return `${parseInt(val / 60)} minutes ${val % 60} seconds`
+        return `${parseInt(val / 60)} minutes<br>${val % 60} seconds`
       }
       return `${val} seconds`
     }

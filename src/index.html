@@ -7,16 +7,37 @@
 </head>
 <body>
   <div class="app">
-    <div class="main">
-      Stand up and go out for <input type="text" v-model="user.restTime"> minutes after working for 
-      <input type="text" v-model="user.workTime"> minutes
-      <hr>
-      <div class="timer" v-if="remainTime">
-        You will be forced to go out in <br>{{ remainTime | formatTimer }} ;)
-      </div>
+    <div class="status">
+      <div class="status-inner">
+        <div class="status-item">
+          <div class="divide">
+            WORK
+          </div>
+          <div class="divide">
+            <input type="number" @keydown.enter="handleConfirm" @input="handleTyping" v-model="user.workTime">
+          </div>
+          <div class="divide">
+            Min.
+          </div>
+        </div>
+        <div class="status-item">
+          <div class="divide">
+            REST
+          </div>
+          <div class="divide">
+            <input type="number" @keydown.enter="handleConfirm" @input="handleTyping" v-model="user.restTime">
+          </div>
+          <div class="divide">
+            Min.
+          </div>
+        </div> 
+      </div>    
+    </div>
+    <div class="timer-wrapper" v-if="remainTime">
+      <span class="timer">{{{   remainTime | formatTimer }}}</span>
     </div>
     <div class="bar">
-      <button class="btn" @click="handleConfirm">Confirm</button>
+      <button class="btn" v-if="typed" @click="handleConfirm">Confirm</button>
       <button class="btn" @click="handleReset">Reset</button>
       <button class="btn" @click="handlePause">
         {{ paused ? 'Resume' : 'Pause' }}
