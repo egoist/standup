@@ -30,4 +30,4 @@ $ npm run build:all
 
 ## License
 
-[EGOIST](https://github.com/egoist)
+MIT &copy; [EGOIST](https://github.com/egoist)
