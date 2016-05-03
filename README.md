@@ -20,8 +20,8 @@ As soon as it has a stable and elegant UI we will distribute the `dmg` and `exe`
 
 ```bash
 $ npm install -g electron-packager
-$ cd standup
-$ npm install
+$ cd standup/src && npm install
+$ cd .. && npm install
 # build for your platform
 $ electron-packager ...
 # build for all platforms

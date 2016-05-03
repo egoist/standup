@@ -7,18 +7,20 @@
 </head>
 <body>
   <div class="app">
-    Stand up and go out for <input type="text" v-model="user.restTime"> minutes after working for 
-    <input type="text" v-model="user.workTime"> minutes
-    <div class="form-actions">
+    <div class="main">
+      Stand up and go out for <input type="text" v-model="user.restTime"> minutes after working for 
+      <input type="text" v-model="user.workTime"> minutes
+      <hr>
+      <div class="timer" v-if="remainTime">
+        You will be forced to go out in <br>{{ remainTime | formatTimer }} ;)
+      </div>
+    </div>
+    <div class="bar">
       <button class="btn" @click="handleConfirm">Confirm</button>
       <button class="btn" @click="handleReset">Reset</button>
       <button class="btn" @click="handlePause">
         {{ paused ? 'Resume' : 'Pause' }}
       </button>
-    </div>
-    <hr>
-    <div class="timer" v-if="remainTime">
-      You will be forced to go out in <br>{{ remainTime | formatTimer }} ;)
     </div>
   </div>
   <script src="./modules/vue.js"></script>
