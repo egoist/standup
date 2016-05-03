@@ -1,6 +1,12 @@
 # Stand Up
 
-This menubar app **forces** (really! force!) you to stand up in a specific time, 40 minutes by default.
+This menubar app **forces** (really! force!) you to stand up in every 40 minutes.
+
+**But I already have an Apple Watch**, you can put off the notification sent by your watch, that never works as expected.
+
+**But I use [stand](https://getstandapp.com/)**, I do! But same problem as above, I always ignore those notifications and keep sitting on my chair.
+
+**Use Stand-Up!**, You will be impressed by the way it forces you to stand up.
 
 It works fine now, but we still need to improve its UI 😅
 
