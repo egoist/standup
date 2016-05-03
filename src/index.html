@@ -12,6 +12,9 @@
     <div class="form-actions">
       <button class="btn" @click="handleConfirm">Confirm</button>
       <button class="btn" @click="handleReset">Reset</button>
+      <button class="btn" @click="handlePause">
+        {{ paused ? 'Resume' : 'Pause' }}
+      </button>
     </div>
     <hr>
     <div class="timer" v-if="remainTime">
