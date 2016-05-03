@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>阿姨！</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="popup">
+  <div class="app">
+    <div class="wrap">
+      <div class="timer" v-if="remainTime !== null">
+        <span v-if="remainTime > 0">
+          Back to work in {{ remainTime | formatTimer }}
+        </span>
+        <span v-else>
+          Back to work, now!
+        </span>
+      </div>
+      <div class="form-actions">
+        <button class="btn" @click="closeWindow" :disabled="remainTime > 0">回到工作</button>
+      </div>
+    </div>
+  </div>
+  <script src="./modules/vue.js"></script>
+  <script src="./js/popup.js"></script>
+</body>
+</html>

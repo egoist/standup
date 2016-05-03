@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  line-height: 1.7;
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont,
+             'avenir next', avenir,
+             helvetica, 'helvetica neue',
+             Ubuntu,
+             'segoe ui', arial,
+             sans-serif
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e2e2e2;
+  margin: 15px 0;
+}
+
+.app {
+  padding: 10px;
+}
+
+.popup {
+  background-color: #1F8EA3;
+}
+
+.popup .timer {
+  font-size: 10rem;
+}
+
+.fr {
+  float: right;
+}
+
+.form-actions {
+  overflow: hidden;
+  border-top: 1px solid #e2e2e2;
+  margin-top: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.form-actions .btn {
+  display: inline-block;
+}

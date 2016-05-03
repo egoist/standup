@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <title>起来，不愿做...</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="app">
+    Stand up and go out for <input type="text" v-model="user.restTime"> minutes after working for 
+    <input type="text" v-model="user.workTime"> minutes
+    <div class="form-actions">
+      <button class="btn" @click="handleConfirm">Confirm</button>
+      <button class="btn" @click="handleReset">Reset</button>
+    </div>
+    <hr>
+    <div class="timer" v-if="remainTime">
+      You will be forced to go out in <br>{{ remainTime | formatTimer }} ;)
+    </div>
+  </div>
+  <script src="./modules/vue.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
