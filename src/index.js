@@ -20,6 +20,7 @@ mb.on('ready', function ready () {
     popup = new BrowserWindow({ fullscreen: true, show: false })
     popup.on('closed', function() {
       popup = null
+      mb.window.webContents.send('restart timer')
     })
 
     popup.loadURL(`file://${__dirname}/popup.html`)
@@ -28,7 +29,6 @@ mb.on('ready', function ready () {
 
   ipc.on('close popup', () => {
     popup.close()
-    mb.window.webContents.send('restart timer')
   })
 })
 
