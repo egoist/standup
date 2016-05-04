@@ -10,7 +10,7 @@ This menubar app **forces** (really! force!) you to stand up in every 40 minutes
 
 It works fine now, but we still need to improve its UI 😅
 
-![preview](http://ww4.sinaimg.cn/large/a15b4afegw1f3icrpmxm9j20e30cpjsa.jpg)
+![preview](http://ww4.sinaimg.cn/large/a15b4afegw1f3j51t08qoj209y0e7dgt)
 
 -
 
