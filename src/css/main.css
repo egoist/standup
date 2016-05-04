@@ -37,11 +37,59 @@ hr {
 }
 
 .popup {
-  background-color: #1F8EA3;
+  background-color: #FE4E6E;
+  color: white;
+  height: 100%;
+  padding: 20px;
 }
 
 .popup .timer {
   font-size: 10rem;
+}
+
+.popup .form-actions {
+  margin-top: 3rem;
+}
+
+.popup .form-actions .btn {
+  background-color: #3F72AF;
+  border: none;
+  width: 600px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 0;
+  color: white;
+  padding: 0;
+  font-size: 4rem;
+  position: relative;
+}
+
+.popup .form-actions .btn:hover {
+  background-color: #486990;
+}
+
+.popup .form-actions .btn:hover:after {
+  border-left-color: #486990;
+}
+
+.popup .form-actions .btn:after {
+  border: 50px solid transparent;
+  border-left-color: #3F72AF;
+  display: block;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+}
+
+.popup .form-actions .btn:disabled {
+  background-color: #486990;
+  cursor: not-allowed;
+}
+
+.popup .form-actions .btn:disabled:after {
+  border-left-color: #486990;
 }
 
 .fr {
