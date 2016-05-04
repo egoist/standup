@@ -20,7 +20,9 @@ mb.on('ready', function ready () {
     popup = new BrowserWindow({ fullscreen: true, show: false })
     popup.on('closed', function() {
       popup = null
-      mb.window.webContents.send('restart timer')
+      if (mb.window) {
+        mb.window.webContents.send('restart timer')
+      }
     })
 
     popup.loadURL(`file://${__dirname}/popup.html`)

@@ -5,7 +5,8 @@ new Vue({
   data() {
     const remainTime = JSON.parse(localStorage.getItem('stand:user')).restTime * 60 * 1000
     return {
-      remainTime
+      remainTime,
+      paused: false
     }
   },
   ready() {
@@ -17,6 +18,9 @@ new Vue({
     },
     startTimer() {
       this.timer = setInterval(() => {
+        if (this.paused) {
+          return
+        }
         this.remainTime -= 1000
         if (this.remainTime <= 0) {
           clearInterval(this.timer)

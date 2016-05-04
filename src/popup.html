@@ -17,7 +17,10 @@
         </span>
       </div>
       <div class="form-actions">
-        <button class="btn" @click="closeWindow" :disabled="remainTime > 0">Back to Work</button>
+        <button class="btn pause-button" v-if="remainTime > 0" @click="paused = !paused">
+          {{ paused ? 'Resume' : 'Pause' }}
+        </button>
+        <button class="btn back-button" @click="closeWindow" :disabled="remainTime > 0">Back to Work</button>
       </div>
     </div>
   </div>
