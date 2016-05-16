@@ -6,6 +6,7 @@ new Vue({
     const remainTime = JSON.parse(localStorage.getItem('stand:user')).restTime * 60 * 1000
     return {
       remainTime,
+      elapsedTime: 0,
       paused: false
     }
   },
@@ -14,6 +15,9 @@ new Vue({
   },
   methods: {
     closeWindow() {
+      if (this.elapsedTimer) {
+        clearInterval(this.elapsedTimer)
+      }
       ipc.send('close popup')
     },
     startTimer() {
@@ -24,7 +28,13 @@ new Vue({
         this.remainTime -= 1000
         if (this.remainTime <= 0) {
           clearInterval(this.timer)
+          this.startElapsedTimer()
         }
+      }, 1000)
+    },
+    startElapsedTimer() {
+      this.elapsedTimer = setInterval(() => {
+        this.elapsedTime += 1000
       }, 1000)
     }
   },

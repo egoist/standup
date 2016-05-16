@@ -4,7 +4,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "app": "NODE_ENV=development electron src/index.js",
     "build:all": "electron-packager ./src --all --overwrite --out dist",
-    "build:osx": "electron-packager ./src --platform=darwin --arch=x64 --overwrite --out dist"
+    "build:osx": "electron-packager ./src --icon=./src/images/stand.icns --platform=darwin --arch=x64 --overwrite --out dist",
+    "build:dmg": "appdmg appdmg.json ./dist/standup.dmg"
   },
   "author": "EGOIST <0x142857@gmail.com>",
   "license": "ISC",

@@ -44,11 +44,11 @@ hr {
 }
 
 .popup .timer {
-  font-size: 10rem;
+  font-size: 10vw;
 }
 
 .popup .form-actions {
-  margin-top: 3rem;
+  margin-top: 3vw;
   font-size: 0;
 }
 

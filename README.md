@@ -14,7 +14,7 @@ It works fine now, but we still need to improve its UI 😅
 
 -
 
-As soon as it has a stable and elegant UI we will distribute the `dmg` and `exe` version for you to download. Currently, you can download the [prebuilt version](http://7d9o3i.com1.z0.glb.clouddn.com/standup/latest.zip).
+As soon as it has a stable and elegant UI we will distribute the `dmg` and `exe` version for you to download. Currently, you can download the [prebuilt version](http://7d9o3i.com1.z0.glb.clouddn.com/standup%2Fstandup.dmg).
 
 ## Build
 

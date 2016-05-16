@@ -31,14 +31,8 @@ new Vue({
       localStorage.setItem('stand:user', data)
       this.startTimer()
     },
-    handleReset() {
-      this.typed = true
-      this.user = {
-        workTime: 40,
-        restTime: 10
-      }
-      const data = JSON.stringify(this.user)
-      localStorage.setItem('stand:user', data)
+    handleCancel() {
+      this.typed = false
     },
     handlePause() {
       this.paused = !this.paused

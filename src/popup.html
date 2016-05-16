@@ -13,7 +13,7 @@
           Back to work in<br>{{ remainTime | formatTimer }}
         </span>
         <span v-else>
-          Back to work, now!
+          Back to work, now!<br> elapsed {{ elapsedTime | formatTimer }}
         </span>
       </div>
       <div class="form-actions">
